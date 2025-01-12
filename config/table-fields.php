@@ -124,7 +124,7 @@ return [
     'mst_items' => [
         'category_id' => [
             'label' => 'Kategori',
-            'type'  => 'options-obj:mst_categories,id,name|record_type,BARANG',
+            'type'  => 'options-obj:mst_categories,id,name',
         ],
         'name' => [
             'label' => 'Nama',
@@ -151,7 +151,7 @@ return [
     'mst_services' => [
         'category_id' => [
             'label' => 'Kategori',
-            'type'  => 'options-obj:mst_categories,id,name|record_type,JASA',
+            'type'  => 'options-obj:mst_categories,id,name',
         ],
         'name' => [
             'label' => 'Nama',

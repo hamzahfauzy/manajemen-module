@@ -20,7 +20,7 @@ CREATE TABLE mst_services (
     status VARCHAR(100) DEFAULT NULL,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     created_by INT DEFAULT NULL,
-    updated_at DATETIME DEFAULT NULL,
+    updated_at TIMESTAMP NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
     updated_by INT DEFAULT NULL,
 
     CONSTRAINT fk_mst_services_category_id FOREIGN KEY (category_id) REFERENCES mst_categories(id) ON DELETE SET NULL,
@@ -37,7 +37,7 @@ CREATE TABLE mst_items (
     status VARCHAR(100) DEFAULT NULL,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     created_by INT DEFAULT NULL,
-    updated_at DATETIME DEFAULT NULL,
+    updated_at TIMESTAMP NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
     updated_by INT DEFAULT NULL,
 
     CONSTRAINT fk_mst_items_category_id FOREIGN KEY (category_id) REFERENCES mst_categories(id) ON DELETE SET NULL,
@@ -74,7 +74,7 @@ CREATE TABLE mst_suppliers (
     status VARCHAR(100) DEFAULT NULL,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     created_by INT DEFAULT NULL,
-    updated_at DATETIME DEFAULT NULL,
+    updated_at TIMESTAMP NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
     updated_by INT DEFAULT NULL,
 
     CONSTRAINT fk_mst_suppliers_created_by FOREIGN KEY (created_by) REFERENCES users(id) ON DELETE SET NULL,
